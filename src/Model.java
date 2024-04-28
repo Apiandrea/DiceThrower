@@ -2,6 +2,8 @@ import java.security.SecureRandom;
 
 public class Model {
     SecureRandom gen = new SecureRandom();
+
+    private int counter = 0;
     private int result;
     private int even;
     private int odd;
@@ -14,6 +16,14 @@ public class Model {
 
     public int getResult() {
         return result;
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
     }
 
     public void setResult(int result) {
@@ -36,9 +46,17 @@ public class Model {
         this.odd = odd;
     }
 
-    public int throwDice()
+    public void throwDice()
     {
-        return Math.abs(gen.nextInt()%6+1);
+        int x = Math.abs((gen.nextInt()%6)+1);
+
+        if(x % 2 == 0)
+            this.even++;
+        else
+            this.odd++;
+
+        this.counter++;
+        this.result = x;
     }
 
     public void reset()
@@ -46,5 +64,6 @@ public class Model {
         this.odd = 0;
         this.even = 0;
         this.result = 0;
+        this.counter = 0;
     }
 }

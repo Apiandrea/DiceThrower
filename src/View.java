@@ -36,7 +36,6 @@ public class View extends JFrame{
 
         resetButton.setFont(fontDetails);
         throwButton.setFont(fontDetails);
-
     }
 
     public void defaultSettings(String title)
@@ -59,5 +58,24 @@ public class View extends JFrame{
     public JButton getBtnReset()
     {
         return resetButton;
+    }
+
+    public void setOdd(int x)
+    {
+        valueOddLabel.setText(String.valueOf(x));
+    }
+
+    public void setEven(int x)
+    {
+        valueEvenLabel.setText(String.valueOf(x));
+    }
+
+    public void setResult(int x)
+    {
+        resultLabel.setText(String.valueOf(x));
+    }
+
+    public JTextArea getHistory(){
+        return this.history;
     }
 }
