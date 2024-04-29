@@ -24,6 +24,13 @@ public class View extends JFrame{
     public View()
     {
         defaultSettings("DiceThrower - Apiandrea");
+/*
+        northPanel.setSize(180, 450);
+        northPanel.setLayout(null);
+
+        southPanel.setSize(180, 500);
+        southPanel.setLayout(null);
+*/
 
         Font fontResult = new Font(Font.SERIF , Font.BOLD, 50);
         resultLabel.setFont(fontResult);
@@ -33,6 +40,9 @@ public class View extends JFrame{
         textEvenLabel.setFont(fontDetails);
         valueOddLabel.setFont(fontDetails);
         valueEvenLabel.setFont(fontDetails);
+        history.setFont(fontDetails);
+
+
 
         resetButton.setFont(fontDetails);
         throwButton.setFont(fontDetails);

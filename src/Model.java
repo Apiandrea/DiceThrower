@@ -34,7 +34,7 @@ public class Model {
         return even;
     }
 
-    public void setEve(int even) {
+    public void setEven(int even) {
         this.even = even;
     }
 
@@ -48,7 +48,7 @@ public class Model {
 
     public void throwDice()
     {
-        int x = Math.abs((gen.nextInt()%6)+1);
+        int x = Math.abs((gen.nextInt(6))+1);
 
         if(x % 2 == 0)
             this.even++;

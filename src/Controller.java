@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -30,7 +31,18 @@ public class Controller {
                 view.setResult(model.getResult());
                 view.setOdd(model.getOdd());
                 view.setEven(model.getEven());
+                this.checkRows(view.getHistory());
                 view.getHistory().append("\n" + "Throw n." + String.valueOf(model.getCounter()) + ": " + String.valueOf(model.getResult()));
+            }
+
+            public void checkRows(JTextArea history)
+            {
+                int nRows = history.getLineCount();
+                if(nRows > 7){
+                    String tmp = history.getText();
+                    String tmp2 = tmp.substring(tmp.indexOf("\n", tmp.indexOf("\n")+2));
+                    history.setText("History:" + tmp2);
+                }
             }
         });
     }
