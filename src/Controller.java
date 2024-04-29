@@ -38,7 +38,7 @@ public class Controller {
             public void checkRows(JTextArea history)
             {
                 int nRows = history.getLineCount();
-                if(nRows > 7){
+                if(nRows > 9){
                     String tmp = history.getText();
                     String tmp2 = tmp.substring(tmp.indexOf("\n", tmp.indexOf("\n")+2));
                     history.setText("History:" + tmp2);

@@ -6,7 +6,6 @@ public class View extends JFrame{
     private JPanel southPanel;
     private JSplitPane southDivider;
     private JPanel buttonsPanel;
-    private JPanel historyPanel;
     private JPanel northPanel;
     private JPanel rootPanel;
     private JButton resetButton;
@@ -20,6 +19,7 @@ public class View extends JFrame{
     private JLabel valueOddLabel;
     private JLabel textEvenLabel;
     private JLabel valueEvenLabel;
+    private JPanel historyPanel;
 
     public View()
     {
@@ -41,18 +41,17 @@ public class View extends JFrame{
         valueOddLabel.setFont(fontDetails);
         valueEvenLabel.setFont(fontDetails);
         history.setFont(fontDetails);
-
-
-
         resetButton.setFont(fontDetails);
         throwButton.setFont(fontDetails);
+
+
     }
 
     public void defaultSettings(String title)
     {
         setContentPane(rootPanel);
         setLocationRelativeTo(null);
-        setSize(450, 500);
+        setSize(550, 500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle(title);
         setResizable(false);
